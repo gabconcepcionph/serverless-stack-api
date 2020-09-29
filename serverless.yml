@@ -12,7 +12,7 @@ plugins:
 
 custom:
   stage: ${opt:stage, self:provider.stage}
-  tableName: ${self:custom.stage}notes
+  tableName: ${self:custom.stage}-notes
 
 provider:
   name: aws
@@ -27,7 +27,6 @@ provider:
   #environment:
   #  SAMPLE_ENV_VAR: ${env:SAMPLE_ENV_VAR}
   environment:
-    tableName: ${self::custom.tableName}
     stripeSecretKey: ${env:STRIPE_SECRET_KEY}
   iamRoleStatements:
     - Effect: Allow
