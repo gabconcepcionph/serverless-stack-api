@@ -12,7 +12,7 @@ plugins:
 
 custom:
   stage: ${opt:stage, self:provider.stage}
-  tableName: ${self:custom.stage}-notes
+  tableName: ${self:custom.stage}notes
 
 provider:
   name: aws
